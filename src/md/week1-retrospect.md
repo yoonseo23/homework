@@ -9,8 +9,10 @@
 6. 앞으로의 계획
 
 ### 소개 및 개요
-이름 : 정윤서 //
-사전 조사 항목 : MacOS user, 비전공자[x], HTML/CSS/JS 선행 X //
+이름 : 정윤서
+
+사전 조사 항목 : MacOS user, 비전공자[x], HTML/CSS/JS 선행 X
+
 언어 사용 경험 : C, python
 
 6개월 긴 여정의 시작 주,
