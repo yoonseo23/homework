@@ -1,1 +1,56 @@
 /* 여기에 스타일을 구현해 주세요 */
+ul.images_t {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 100px 100px 10px;
+}
+
+ul.images_t li {
+  position: relative;
+}
+
+ul.images_b {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 10px 100px 100px;
+}
+
+ul.images_b li {
+  position: relative;
+}
+
+.avatars {
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatars img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.status {
+  position: absolute; /* li를 기준으로 위치 지정 */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  bottom: -3px;
+  right: -3px;
+  background-color: #dbdbdb;
+  border: 2px solid white;
+}
+
+.status.green {
+  background-color: #4cfe88;
+}
+.status.gray {
+  background-color: #dbdbdb;
+}
