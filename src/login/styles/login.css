@@ -1,1 +1,12 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
