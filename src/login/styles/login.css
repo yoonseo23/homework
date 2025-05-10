@@ -67,6 +67,7 @@ form {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   font-size: var(--text-14);
   /* height: 48px; */
@@ -82,6 +83,10 @@ form {
     font-size: var(--text-14);
     width: 100%;
     color: var(--gray);
+
+    @media (width >= 768px) {
+      width: 500px;
+    }
   }
 }
 
@@ -104,6 +109,11 @@ form {
     margin: 0 20px;
     padding-block: 16px;
     cursor: pointer;
+
+    @media (width >= 768px) {
+      width: 500px;
+      max-width: 500px;
+    }
   }
 }
 
@@ -113,6 +123,8 @@ form {
   color: var(--error-red);
   font-size: var(--text-12);
   line-height: 1.125rem;
+  position: relative;
+  right: 158px;
 }
 
 input:invalid + .errorMessage {
@@ -136,6 +148,10 @@ input:valid + .errorMessage {
   color: var(--dark-black);
   position: absolute;
   right: 20px;
+
+  @media (width >= 768px) {
+    left: 20px;
+  }
 }
 
 .keepLoginSwitch input[type='checkbox'] {
@@ -161,6 +177,13 @@ input:checked ~ .checked {
 }
 
 .IPswitch {
+  @media (width < 768px) {
+    display: none;
+  }
+
+  position: absolute;
+  right: 20px;
+
   input[type='checkbox'] {
     opacity: 0;
   }
@@ -186,7 +209,7 @@ input:checked ~ .checked {
 
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.5; 
+    line-height: 1.5;
   }
 
   .on {
