@@ -68,12 +68,11 @@ form {
   display: flex;
   flex-direction: column;
 
-
   font-size: var(--text-14);
   /* height: 48px; */
   margin-inline: var(--spacing-20);
   margin-bottom: var(--spacing-10);
-  
+
   input {
     border: 1px solid var(--silver);
     padding-left: var(--spacing-15);
@@ -85,7 +84,6 @@ form {
     color: var(--gray);
   }
 }
-
 
 .buttonWrapper {
   --fill-color: var(--green);
@@ -109,10 +107,9 @@ form {
   }
 }
 
-
 .errorMessage {
   display: none;
-  margin-block: 7px 10px;
+  margin-block: 7px 0;
   color: var(--error-red);
   font-size: var(--text-12);
   line-height: 1.125rem;
@@ -125,8 +122,6 @@ input:invalid + .errorMessage {
 input:valid + .errorMessage {
   display: none;
 }
-
-
 
 .keepLoginSwitch {
   --text-keepLogin: var(--text-14);
@@ -165,5 +160,44 @@ input:checked ~ .checked {
   display: inline-block;
 }
 
-/* .IPswitch {
-} */
+.IPswitch {
+  input[type='checkbox'] {
+    opacity: 0;
+  }
+
+  .on {
+    color: var(--green);
+    font-size: var(--text-14);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .off {
+    color: var(--gray);
+    font-size: var(--text-14);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  a {
+    color: var(--blackDark);
+    text-align: right;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5; 
+  }
+
+  .on {
+    display: none;
+  }
+
+  input:checked + label .on {
+    display: inline;
+  }
+
+  input:checked + label .off {
+    display: none;
+  }
+}
