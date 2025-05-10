@@ -65,19 +65,20 @@ form {
 .form-input {
   --input-color: var(--gray);
 
-  display: block;
+  display: flex;
+  flex-direction: column;
+
 
   font-size: var(--text-14);
-  height: 48px;
-  border: 1px solid var(--silver);
+  /* height: 48px; */
   margin-inline: var(--spacing-20);
   margin-bottom: var(--spacing-10);
-  padding-left: var(--spacing-15);
-  padding-block: 14px 13px;
-  box-sizing: border-box;
   
   input {
-    border: none;
+    border: 1px solid var(--silver);
+    padding-left: var(--spacing-15);
+    padding-block: 14px 13px;
+    box-sizing: border-box;
     background: none;
     font-size: var(--text-14);
     width: 100%;
@@ -111,11 +112,9 @@ form {
 
 .errorMessage {
   display: none;
-  margin-top: 7px;
+  margin-block: 7px 10px;
   color: var(--error-red);
   font-size: var(--text-12);
-  padding-block: 7px 10px;
-  margin-left: -15px;
   line-height: 1.125rem;
 }
 
