@@ -10,3 +10,161 @@
   white-space: nowrap;
   border: 0;
 }
+/* 색상 팔레트, 변수 */
+:root {
+  --green: #03cf5d;
+  --silver: #dadada;
+  --gray: #999;
+  --dark-black: #333;
+  --error-red: #ff1414;
+  --white: #fff;
+  --default: #121212;
+  --focused: #24388d;
+
+  --line-height: 1.5;
+
+  --text-12: 0.75rem;
+  --text-14: 0.875rem;
+  --text-16: 1rem;
+
+  --spacing-4: 0.25rem;
+  --spacing-7: 0.4375rem;
+  --spacing-10: 0.625rem;
+  --spacing-12: 0.75rem;
+  --spacing-15: 0.9375rem;
+  --spacing-20: 1.25rem;
+  --spacing-70: 4.375rem;
+}
+
+.body {
+  margin: 20px;
+}
+
+.logo {
+  margin-block: 70px 45px;
+
+  display: flex;
+  justify-content: center;
+
+  svg {
+    width: 14.375rem;
+  }
+}
+
+.contentsWrapper {
+  display: flow-root;
+}
+
+form {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  /* gap: var(--spacing-10); */
+}
+
+.form-input {
+  --input-color: var(--gray);
+
+  display: block;
+
+  font-size: var(--text-14);
+  height: 48px;
+  border: 1px solid var(--silver);
+  margin-inline: var(--spacing-20);
+  margin-bottom: var(--spacing-10);
+  padding-left: var(--spacing-15);
+  padding-block: 14px 13px;
+  box-sizing: border-box;
+  
+  input {
+    border: none;
+    background: none;
+    font-size: var(--text-14);
+    width: 100%;
+    color: var(--gray);
+  }
+}
+
+
+.buttonWrapper {
+  --fill-color: var(--green);
+  --text-button: var(--text-16);
+
+  display: flex;
+  justify-content: center;
+
+  .loginButton {
+    display: block;
+    border: 0;
+    background: var(--fill-color);
+    font-size: var(--text-button);
+    line-height: var(--line-height);
+    color: var(--white);
+    font-weight: 700;
+    width: 100%;
+    margin: 0 20px;
+    padding-block: 16px;
+    cursor: pointer;
+  }
+}
+
+
+.errorMessage {
+  display: none;
+  margin-top: 7px;
+  color: var(--error-red);
+  font-size: var(--text-12);
+  padding-block: 7px 10px;
+  margin-left: -15px;
+  line-height: 1.125rem;
+}
+
+input:invalid + .errorMessage {
+  display: block;
+}
+
+input:valid + .errorMessage {
+  display: none;
+}
+
+
+
+.keepLoginSwitch {
+  --text-keepLogin: var(--text-14);
+  --text-color: var(--dark-black);
+
+  display: inline-flex;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: var(--spacing-10);
+  margin-left: var(--spacing-15);
+  font-size: var(--text-14);
+  color: var(--dark-black);
+  position: absolute;
+  right: 20px;
+}
+
+.keepLoginSwitch input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.checked {
+  display: none;
+}
+.unchecked {
+  display: inline-block;
+}
+
+input:checked ~ .unchecked {
+  display: none;
+}
+input:checked ~ .checked {
+  display: inline-block;
+}
+
+/* .IPswitch {
+} */
