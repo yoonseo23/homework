@@ -6,10 +6,22 @@ body {
 /* 카드 레이아웃 */
 .container {
   display: grid;
-  row-gap: 12px;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
   
   align-content: center;
 
+  .onecell {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .twocells {
+    @media (width < 1024px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
 }
 
 .productCard {
