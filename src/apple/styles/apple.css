@@ -1,3 +1,485 @@
 @import "./card-component.css";
+body {
+  margin: 10px;
+}
 
 /* 카드 레이아웃 */
+.container {
+  display: grid;
+  row-gap: 12px;
+  
+  align-content: center;
+
+}
+
+.productCard {
+--item-color-light: var(--white);
+--item-color-dark: var(--black);
+--box-size: var(--size);
+
+  /* background: red; */
+  padding-top: 37px;
+  inline-size: auto;
+  block-size: var(--box-size);
+
+  h2 { 
+    margin-top: 4px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .promotion {
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: .012em;
+    margin-top: 9px;
+    text-align: center;
+  }
+
+  .date {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .012em;
+    margin-top: 9px;
+    text-align: center;
+  }
+
+  .buttonWrapper {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .button {
+    border: 1px solid yellow;
+    border-radius: 980px;
+    padding: 7px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+
+    &.price {
+      margin-left: 10px;
+    }
+  }
+}
+
+.iPadPro {
+  position: relative;
+  background-color: #000;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: 100%;
+    background-image: url(/src/apple/products/ipad_pro.jpeg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+
+    @media 
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('/src/apple/products/ipad_pro_2x.jpeg');
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url('/src/apple/products/ipad_pro_wide.jpeg');
+    }
+    @media 
+    (min-width: 1024px) and 
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx)
+     {
+      background-image: url('/src/apple/products/ipad_pro_wide_2x.jpeg');
+    }
+  }
+  z-index: 1;
+  
+  color: var(--item-color-light);
+
+  .date {
+    color: var(--gray);
+  }
+
+  .more {
+    color: var(--white);
+    background: var(--blue-300);
+    border: 1px solid var(--blue-300);
+
+    &:hover, &:focus{
+      background: var(--blue-200);
+    }
+  }
+
+  .price {
+    border: 1px solid var(--blue-400);
+    color: var(--blue-400);
+
+    &:hover, &:focus{
+      background: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+.iPadAir {
+  position: relative;
+  background: linear-gradient(to bottom, #aedbee, #f3f7f8);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: 100%;
+    background-image: url(/src/apple/products/ipad_air.jpeg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+
+    @media 
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('/src/apple/products/ipad_air_2x.jpeg');
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url('/src/apple/products/ipad_air_wide.jpeg');
+    }
+    @media 
+    (min-width: 1024px) and 
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx)
+     {
+      background-image: url('/src/apple/products/ipad_air_wide_2x.jpeg');
+    }
+  }
+  z-index: 1;
+  
+  color: var(--item-color-dark);
+
+  .date {
+    color: var(--gray);
+  }
+
+  .more {
+    color: var(--white);
+    background: var(--blue-300);
+    border: 1px solid var(--blue-300);
+
+    &:hover, &:focus{
+      background: var(--blue-200);
+    }
+  }
+
+  .price {
+    border: 1px solid var(--blue-400);
+    color: var(--blue-400);
+
+    &:hover, &:focus{
+      background: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+.iPhone15Pro {
+  position: relative;
+  background-color: #000;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: 100%;
+    background-image: url(/src/apple/products/iphone15_pro.jpeg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+
+    @media 
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('/src/apple/products/iphone15_pro_2x.jpeg');
+    }
+
+    @media (min-width: 1024px) {
+      background-image: url('/src/apple/products/iphone15_pro_wide.jpeg');
+    }
+    @media 
+    (min-width: 1024px) and 
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx)
+     {
+      background-image: url('/src/apple/products/iphone15_pro_wide_2x.jpeg');
+    }
+  }
+  z-index: 1;
+  
+  color: var(--item-color-light);
+
+  .date {
+    color: var(--gray);
+  }
+
+  .more {
+    color: var(--white);
+    background: var(--blue-300);
+    border: 1px solid var(--blue-300);
+
+    &:hover, &:focus{
+      background: var(--blue-200);
+    }
+  }
+
+  .price {
+    border: 1px solid var(--blue-400);
+    color: var(--blue-400);
+
+    &:hover, &:focus{
+      background: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+.iPhone15 {
+  position: relative;
+  background: #f5f5f7;
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: 100%;
+    background-image: url(/src/apple/products/iphone15.jpeg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+
+    @media 
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('/src/apple/products/iphone15_2x.jpeg');
+    }
+
+  }
+  z-index: 1;
+  
+  color: var(--item-color-dark);
+
+  .date {
+    color: var(--gray);
+  }
+
+  .more {
+    color: var(--white);
+    background: var(--blue-300);
+    border: 1px solid var(--blue-300);
+
+    &:hover, &:focus{
+      background: var(--blue-200);
+    }
+  }
+
+  .price {
+    border: 1px solid var(--blue-400);
+    color: var(--blue-400);
+
+    &:hover, &:focus{
+      background: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+.watch {
+  position: relative;
+  background-color: #000;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: 100%;
+    background-image: url(/src/apple/products/apple_watch.jpeg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+
+    @media 
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('/src/apple/products/apple_watch_2x.jpeg');
+    }
+  }
+  z-index: 1;
+  
+  color: var(--item-color-light);
+
+  .date {
+    color: var(--gray);
+  }
+
+  .more {
+    color: var(--white);
+    background: var(--blue-300);
+    border: 1px solid var(--blue-300);
+
+    &:hover, &:focus{
+      background: var(--blue-200);
+    }
+  }
+
+  .price {
+    border: 1px solid var(--blue-400);
+    color: var(--blue-400);
+
+    &:hover, &:focus{
+      background: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+.macbookAir {
+  position: relative;
+  background: #f5f5f7;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: 100%;
+    background-image: url(/src/apple/products/macbook_air.jpeg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+
+    @media 
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('/src/apple/products/macbook_air_2x.jpeg');
+    }
+  }
+  z-index: 1;
+  
+  color: var(--item-color-dark);
+
+  .date {
+    color: var(--gray);
+  }
+
+  .more {
+    color: var(--white);
+    background: var(--blue-300);
+    border: 1px solid var(--blue-300);
+
+    &:hover, &:focus{
+      background: var(--blue-200);
+    }
+  }
+
+  .price {
+    border: 1px solid var(--blue-400);
+    color: var(--blue-400);
+
+    &:hover, &:focus{
+      background: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+.airpodsPro {
+  position: relative;
+  background-color: #000;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: auto;
+    height: 100%;
+    background-image: url(/src/apple/products/airpods_pro.jpeg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+
+    @media 
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('/src/apple/products/airpods_pro_2x.jpeg');
+    }
+  }
+  z-index: 1;
+  
+  color: var(--item-color-light);
+
+  .date {
+    color: var(--gray);
+  }
+
+  .more {
+    color: var(--white);
+    background: var(--blue-300);
+    border: 1px solid var(--blue-300);
+
+    &:hover, &:focus{
+      background: var(--blue-200);
+    }
+  }
+
+  .price {
+    border: 1px solid var(--blue-400);
+    color: var(--blue-400);
+
+    &:hover, &:focus{
+      background: var(--blue-300);
+      color: var(--white);
+    }
+  }
+}
+/* 
+- 중단점(breakpoint)은 **`1024px`** 
+이 때 디바이스의 `픽셀 밀도`에 따라 1배율 또는 2배율 이미지가 배경으로 반영되도록 구현.
